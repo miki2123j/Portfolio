@@ -140,3 +140,91 @@ a:hover{
 }
 
 /* sections */
+section{
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+.section-container{
+    display: flex;
+}
+
+/*profile section */
+#profile{
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+.pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: auto 0;
+}
+.section_text{
+    align-self: center;
+    text-align: center;
+}
+.section_text p {
+    font-weight: 600;
+}
+.section_text_p1{
+    text-align: center;
+}
+.section_text_p2{
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+.title{
+    font-size: 3rem;
+    text-align: center;
+}
+#socials-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+    gap: 1rem;
+}
+.icon{
+    cursor: pointer;
+    height: 2rem;
+}
+
+.btn-container{
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.btn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem;
+    width: 8rem;
+    border-radius: 2rem;
+}
+
+.btn1, .btn2{
+    border: rgb(53, 53, 53) 0.1rem solid;
+}
+.btn1:hover, .btn2:hover{
+    cursor: pointer;
+}
+.btn1:hover, .btn2{
+    background: rgb(53, 53, 53);
+    color: white;
+}
+.btn2:hover, .btn1{
+    background: rgb(255, 255, 255);
+    color:black;
+}
+.btn1{
+    background: none;
+}
+.btn1:hover{
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
