@@ -1,0 +1,163 @@
+/* Emergency visibility fixes for portfolio */
+
+/* Force visibility of about section */
+.about, .about * {
+    visibility: visible !important;
+}
+
+.about-text, .about-content, .skills-section {
+    display: block !important;
+    opacity: 1 !important;
+}
+
+.about {
+    display: block !important;
+    background: #1a1a1a !important;
+    color: #ffffff !important;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1;
+}
+
+/* Force text colors */
+.about-intro {
+    color: #ffffff !important;
+    font-size: 1.2rem !important;
+}
+
+.about-text p {
+    color: #e0e0e0 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.section-title {
+    color: #00d4ff !important;
+    font-size: 2.5rem !important;
+    margin-bottom: 3rem !important;
+}
+
+.skills-section h3 {
+    color: #ffffff !important;
+    font-size: 1.8rem !important;
+}
+
+.skills-category h4 {
+    color: #00d4ff !important;
+    font-size: 1.2rem !important;
+}
+
+.tech-badge {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 0.4rem 0.8rem !important;
+    border-radius: 1.5rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.4rem !important;
+    margin: 0.2rem !important;
+    font-size: 0.85rem !important;
+}
+
+.tech-badge i {
+    font-size: 0.9rem !important;
+    color: inherit !important;
+}
+
+.about-badge {
+    display: inline-block !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 2rem !important;
+    margin: 0.5rem !important;
+    font-weight: 500 !important;
+}
+
+.about-badge.recent-graduate {
+    background: rgba(0, 212, 255, 0.2) !important;
+    color: #00d4ff !important;
+    border: 1px solid rgba(0, 212, 255, 0.5) !important;
+}
+
+.about-badge.ai-enthusiast {
+    background: rgba(57, 255, 20, 0.2) !important;
+    color: #39ff14 !important;
+    border: 1px solid rgba(57, 255, 20, 0.5) !important;
+}
+
+.about-badge.innovation-driven {
+    background: rgba(255, 193, 7, 0.2) !important;
+    color: #ffc107 !important;
+    border: 1px solid rgba(255, 193, 7, 0.5) !important;
+}
+
+/* Force preloader to hide */
+#preloader {
+    display: none !important;
+}
+
+/* Force container visibility */
+.container {
+    display: block !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+}
+
+/* Ensure proper section heights and spacing */
+.education {
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 6rem 0 !important;
+}
+
+.contact {
+    padding: 8rem 0 5rem 0 !important;
+    min-height: 100vh !important;
+}
+
+/* Emergency font fallbacks - but preserve icon fonts */
+body, p, h1, h2, h3, h4, h5, h6, span:not([class*="fa"]), div:not([class*="fa"]) {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+}
+
+/* Preserve Font Awesome icons */
+.fas, .fab, .far, .fal, .fad, .fa,
+[class^="fa-"], [class*=" fa-"],
+i[class^="fa"], i[class*=" fa"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "FontAwesome" !important;
+    font-weight: 900 !important;
+    font-style: normal !important;
+    display: inline-block !important;
+    text-rendering: auto !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+/* Specific Font Awesome brand icons */
+.fab {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
+/* Ensure icon containers don't break */
+.social-link, .project-link, .btn {
+    font-family: inherit !important;
+}
+
+.social-link i, .project-link i, .btn i {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", "FontAwesome" !important;
+}
+
+/* Force icon visibility */
+i.fas, i.fab, i.far {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* Debug outline - uncomment to see element boundaries */
+/*
+.about * {
+    outline: 1px solid red !important;
+}
+*/
