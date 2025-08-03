@@ -30,31 +30,59 @@ class ScrollEffects {
                 const targetElement = document.getElementById(targetId);
                 
                 if (targetElement) {
-                    let offsetTop = targetElement.offsetTop - 100; // Increased navbar offset
+                    // Cross-browser compatible scroll calculation
+                    const navbarHeight = 80;
+                    let elementPosition;
                     
-                    // Special handling for shorter sections to prevent overflow
-                    const viewportHeight = window.innerHeight;
-                    const sectionHeight = targetElement.offsetHeight;
-                    const documentHeight = document.documentElement.scrollHeight;
+                    // Use getBoundingClientRect for more accurate positioning across browsers
+                    const rect = targetElement.getBoundingClientRect();
+                    const currentScrollY = window.pageYOffset || document.documentElement.scrollTop;
+                    elementPosition = rect.top + currentScrollY - navbarHeight;
                     
-                    // For shorter sections (like Education), ensure they don't show next section
-                    if (sectionHeight < viewportHeight) {
-                        const nextSectionStart = targetElement.offsetTop + sectionHeight;
-                        const maxScroll = Math.max(0, nextSectionStart - viewportHeight + 50); // 50px buffer
-                        offsetTop = Math.min(offsetTop, maxScroll);
+                    // Fallback for older browsers or edge cases
+                    if (isNaN(elementPosition) || elementPosition < 0) {
+                        elementPosition = targetElement.offsetTop - navbarHeight;
                     }
                     
-                    // Ensure we don't scroll past the document
-                    const maxDocumentScroll = documentHeight - viewportHeight;
-                    offsetTop = Math.min(offsetTop, maxDocumentScroll);
-                    
-                    window.scrollTo({
-                        top: Math.max(0, offsetTop), // Ensure non-negative
-                        behavior: 'smooth'
-                    });
+                    // Enhanced smooth scroll with fallback
+                    if ('scrollBehavior' in document.documentElement.style) {
+                        window.scrollTo({
+                            top: Math.max(0, elementPosition),
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        // Fallback for browsers without smooth scroll support
+                        this.smoothScrollFallback(Math.max(0, elementPosition));
+                    }
                 }
             });
         });
+    }
+    
+    // Smooth scroll fallback for older browsers
+    smoothScrollFallback(targetY) {
+        const startY = window.pageYOffset;
+        const difference = targetY - startY;
+        const startTime = performance.now();
+        const duration = 800; // 800ms duration
+        
+        function step(currentTime) {
+            const elapsed = currentTime - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            
+            // Easing function for smooth animation
+            const easeInOutCubic = progress < 0.5 
+                ? 4 * progress * progress * progress 
+                : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+            
+            window.scrollTo(0, startY + difference * easeInOutCubic);
+            
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        }
+        
+        requestAnimationFrame(step);
     }
     
     setupScrollProgress() {

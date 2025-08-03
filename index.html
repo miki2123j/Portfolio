@@ -7,10 +7,6 @@
     <meta name="description" content="Portfolio of Mikiyas Batu, Computer Science graduate from York University specializing in AI/ML and full-stack development">
     <meta name="keywords" content="AI, Machine Learning, Full Stack Developer, Computer Science, Python, React">
     
-    <!-- Cache Control for Development -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
     
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -21,9 +17,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" crossorigin="anonymous">
     
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="styles/main.css?v=1.7">
-    <link rel="stylesheet" href="styles/animations.css?v=1.7">
-    <link rel="stylesheet" href="styles/emergency-fix.css?v=1.5">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/animations.css">
+    <link rel="stylesheet" href="styles/emergency-fix.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -97,7 +93,7 @@
                     </a>
                 </div>
                 <div class="social-links">
-                    <a href="mailto:miki2123jemaneh@gmail.com" class="social-link" aria-label="Email">
+                    <a href="mailto:mikiyas.batu@gmail.com" class="social-link" aria-label="Email">
                         <i class="fas fa-envelope"></i>
                     </a>
                     <a href="https://www.linkedin.com/in/mikiyas-batu-43762a15b/" target="_blank" class="social-link" aria-label="LinkedIn">
@@ -121,12 +117,9 @@
             <div class="about-content">
                 <div class="about-text">
                     <p class="about-intro">
-                        Recent Computer Science graduate from York University with expertise in <strong>AI/ML</strong> and <strong>full-stack development</strong>. 
-                        Passionate about creating intelligent solutions that solve real-world problems.
-                    </p>
-                    <p>
-                        During my internship at <strong>Brokee</strong>, I developed LLM evaluation systems and automated follow-up question generation, 
-                        showcasing proficiency with cutting-edge AI technologies and scalable system architecture.
+                        A recent Computer Science graduate from York University with a strong passion for <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong> and <strong>Data Science</strong>. I am driven by curiosity and a continuous desire to learn, always exploring emerging technologies, algorithms, and real-world applications within these rapidly evolving fields.
+
+                        I aim to leverage my technical skills, academic knowledge, and enthusiasm to contribute to innovative projects and make a meaningful impact in the tech industry. Whether it's developing intelligent systems, analyzing data to uncover insights, or experimenting with the latest ML models, I am excited to collaborate, learn, and grow.
                     </p>
                     <div class="about-badges">
                         <span class="about-badge recent-graduate">🎓 Recent Graduate</span>
@@ -199,9 +192,12 @@
                                 user engagement and interaction quality.
                             </p>
                             <ul class="achievements">
-                                <li>Built comprehensive LLM evaluation framework using Python and machine learning libraries</li>
-                                <li>Designed and deployed follow-up question generation system improving user interaction by 40%</li>
-                                <li>Containerized applications using Docker for scalable deployment and consistent environments</li>
+                                <li>Designed and implemented an LLM evaluation system using Python, Langchain, and the OpenAI API to
+                                    refine prompts for summarizing candidate test performance, improving evaluation consistency.</li>
+                                <li>Built a follow-up question generation system powered by OpenAI GPT models, applying data engineering
+                                    techniques to process real-world candidate responses and validate question accuracy</li>
+                                <li>Containerized applications using Docker for seamless deployment and integration into the company’s work-
+                                    flow, contributing to a more scalable and maintainable AI pipeline</li>
                                 <li>Collaborated with cross-functional teams on AI research projects and data engineering tasks</li>
                             </ul>
                             <div class="tech-stack">
@@ -225,83 +221,110 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
+                        <img src="assets/images/projects/tech-career-platform.png" alt="Tech Career Platform - Professional career development interface with skills tracking, job listings, and analytics" class="project-cover-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="View Demo">
+                                <a href="https://techcareercanada.com/" class="project-link" aria-label="View Demo" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="#" class="project-link" aria-label="View Code">
+                                <a href="https://github.com/laserblade21/career-north-compass/blob/main/README.md" class="project-link" aria-label="View Code" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Amazon Reviews Spam Detection</h3>
+                        <h3 class="project-title">Tech Career Platform</h3>
                         <p class="project-description">
-                            Advanced machine learning system for detecting spam reviews on Amazon using natural language 
-                            processing and deep learning techniques. Achieved 92% accuracy with 35% faster processing.
+                            A collaborative web platform built by a team of two to help aspiring tech professionals in Canada navigate their career journeys with confidence.
                         </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">92%</span>
-                                <span class="metric-label">Accuracy</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">35%</span>
-                                <span class="metric-label">Faster Processing</span>
-                            </div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>AI-powered recommendations</li>
+                                <li>Job tracking with CRUD operations</li>
+                                <li>Market analytics with visualizations</li>
+                            </ul>
                         </div>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">Keras</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">NumPy</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">PostgreSQL</span>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="project-image">
-                        <div class="project-placeholder">
-                            <i class="fas fa-home"></i>
-                        </div>
+                        <img src="assets/images/projects/scheduling-assistant.png" alt="Scheduling Assistant - AI-powered workforce management interface with calendar grids, time tracking, and scheduling optimization" class="project-cover-image">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link" aria-label="View Demo">
+                                <a href="https://shiftwise.ca/auth" class="project-link" aria-label="View Demo" target="_blank" rel="noopener noreferrer">
                                     <i class="fas fa-external-link-alt"></i>
                                 </a>
-                                <a href="#" class="project-link" aria-label="View Code">
+                                <a href="https://github.com/miki2123j/smart-shift/blob/main/README.md" class="project-link" aria-label="View Code" target="_blank" rel="noopener noreferrer">
                                     <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">Housing Price Prediction</h3>
+                        <h3 class="project-title">Scheduling Assistant</h3>
                         <p class="project-description">
-                            Comprehensive machine learning project for predicting housing prices using multiple algorithms 
-                            and extensive exploratory data analysis. Implemented various ML models for comparison.
+                            AI-powered employee scheduling application revolutionizes workforce management by combining intelligent automation with intuitive design. 
                         </p>
                         <div class="project-highlights">
                             <ul>
-                                <li>Extensive exploratory data analysis and visualization</li>
-                                <li>Multiple ML algorithms comparison and evaluation</li>
-                                <li>Feature engineering and data preprocessing</li>
-                                <li>Interactive visualizations and insights</li>
+                                <li>Drag-and-Drop Schedule Management</li>
+                                <li>AI-Powered Scheduling Assistant</li>
+                                <li>Real-Time Cost Tracking & Compliance</li>
+                            </ul>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Supabase</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/projects/amazon-sentiment-analysis.png" alt="Amazon Reviews Sentiment Analysis - Dashboard showing Amazon ratings, sentiment trends, and emotion analysis with positive, neutral, and negative indicators" class="project-cover-image">
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://onedrive.live.com/:p:/g/personal/A73953BD7D2E948D/EUOrN_Iz4AJErJJN1Jt-dV4B5HjZu1JTNHz5IIRDrNU7jA?resid=A73953BD7D2E948D!sf237ab43e0334402ac924dd49b7e755e&ithint=file%2Cpptx&e=N4Hw0Y&migratedtospo=true&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3AvYy9hNzM5NTNiZDdkMmU5NDhkL0VVT3JOX0l6NEFKRXJKSk4xSnQtZFY0QjVIalp1MUpUTkh6NUlJUkRyTlU3akE_ZT1ONEh3MFk" class="project-link" aria-label="View Paper" target="_blank" rel="noopener noreferrer">
+                                    <i class="fas fa-file-alt"></i>
+                                </a>
+                                <a href="https://github.com/miki2123j/Amazon-Reviews-Spam-Detection-using-LLM-Model/blob/main/README.md" class="project-link" aria-label="View Code" target="_blank" rel="noopener noreferrer">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Amazon Reviews Sentiment Analysis</h3>
+                        <p class="project-description">
+                            A collaborative project built by a team of two to design and deploy a sentiment analysis system for Amazon product reviews.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">80%</span>
+                                <span class="metric-label">Accuracy</span>
+                            </div>
+                        </div>
+                        <div class="project-highlights">
+                            <ul>
+                                <li>Fine-tuned BERT model</li>
+                                <li>Flask backend integration</li>
+                                <li>Real-time prediction interface</li>
                             </ul>
                         </div>
                         <div class="project-tech">
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Scikit-learn</span>
-                            <span class="tech-tag">Pandas</span>
-                            <span class="tech-tag">NumPy</span>
-                            <span class="tech-tag">Matplotlib</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">BERT LLM</span>
                         </div>
                     </div>
                 </div>
@@ -321,7 +344,7 @@
                     <h3 class="degree">Bachelor of Science in Computer Science</h3>
                     <div class="institution">York University</div>
                     <div class="location">Toronto, Canada</div>
-                    <div class="graduation">Graduated: January 2025</div>
+                    <div class="graduation">January 2021 - January 2025</div>
                     <div class="education-description">
                         Comprehensive program covering software engineering, algorithms, data structures, 
                         artificial intelligence, and machine learning fundamentals.

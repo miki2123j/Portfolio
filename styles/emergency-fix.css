@@ -14,9 +14,9 @@
     display: block !important;
     background: #1a1a1a !important;
     color: #ffffff !important;
-    min-height: 100vh;
     position: relative;
     z-index: 1;
+    padding: 6rem 0;
 }
 
 /* Force text colors */
@@ -105,7 +105,6 @@
 
 /* Ensure proper section heights and spacing */
 .education {
-    min-height: 100vh !important;
     display: flex !important;
     align-items: center !important;
     padding: 6rem 0 !important;
@@ -113,7 +112,6 @@
 
 .contact {
     padding: 8rem 0 5rem 0 !important;
-    min-height: 100vh !important;
 }
 
 /* Emergency font fallbacks - but preserve icon fonts */
